@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="live_feed=true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element default="0" label="New Value" mandatory="true" max_length="6" name="new_value" type="integer"/>
+        <element label="New Integer" max_length="40" name="u_integer_1" type="integer"/>
+        <element label="Requested For" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request Type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="HR" sequence="0" value="hr"/>
+                <element label="Legal" sequence="1" value="legal"/>
+                <element label="Facilites" sequence="2" value="facilites"/>
+                <element label="Food court" sequence="3" value="food court"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal 1" label="What Needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="Legal 1" sequence="0" value="legal 1"/>
+                <element label="Leagal 2" sequence="1" value="leagal 2"/>
+                <element label="HR 1" sequence="2" value="hr 1"/>
+                <element label="Facilities 1" sequence="3" value="facilities 1"/>
+                <element label="No Idea" sequence="4" value="no idea"/>
+            </choice>
+        </element>
+    </element>
+</database>
